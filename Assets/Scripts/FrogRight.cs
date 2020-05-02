@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Frog : MonoBehaviour
+public class FrogRight : MonoBehaviour
 {
     private float leftCap, rightCap;
     
-    [SerializeField] private float jumpLength = 10f;
-    [SerializeField] private float jumpHeight = 15f;
+    [SerializeField] private float jumpLength = 2.6f;
+    [SerializeField] private float jumpHeight = 3.5f;
     [SerializeField] private LayerMask ground;
     private Collider2D collider;
     private Rigidbody2D rigidbody;
@@ -19,8 +19,8 @@ public class Frog : MonoBehaviour
         collider = GetComponent<Collider2D>();
         rigidbody = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
-        leftCap = transform.position.x - 10;
-        rightCap = transform.position.x - 1.5f;
+        leftCap = transform.position.x - 1.0f;
+        rightCap = transform.position.x + 8f;
     }
     private void Update(){
         //Transition from Jump to Fall 
