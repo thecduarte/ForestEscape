@@ -17,7 +17,8 @@ public class TimeBar : MonoBehaviour
    
     Animator animPlayer;
     PlayerMovement movement;
-    GameObject health;
+    GameObject health; 
+    public GameObject winUI;
     public GameObject timeUpUI;
     public Slider slider;
     public Text displayText;
@@ -27,6 +28,7 @@ public class TimeBar : MonoBehaviour
         animPlayer = player.GetComponent<Animator>();
         movement = player.GetComponent<PlayerMovement>();
         health = GameObject.Find("Health");
+        // winUI = GameObject.Find("WinUI");
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
     }
@@ -54,6 +56,7 @@ public class TimeBar : MonoBehaviour
             movement.enabled = false;
             health.SetActive(false);
             timeUpUI.SetActive(true);
+            winUI.SetActive(false);
             StartCoroutine(TimeUp());
         }
     }

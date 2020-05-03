@@ -5,13 +5,14 @@ using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
     public GameObject completeLevelUI; public GameObject health;
+    public GameObject timeUI;
     public float waitingTime = 5.0f;
     bool winGame = false;
     bool gameOver = false;
     public void CompleteLevel()
     {
         completeLevelUI.SetActive(true);
-        health.SetActive(false);
+        health.SetActive(false); timeUI.SetActive(false);
         if(winGame == false)
         {
             Invoke("Restart", waitingTime);
