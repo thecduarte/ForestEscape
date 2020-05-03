@@ -5,6 +5,7 @@ using UnityEngine;
 public class Mute : MonoBehaviour
 {
     AudioSource backgroundMusic;
+    public GameObject muteImg;
     // Start is called before the first frame update
     void Start()
     {
@@ -15,6 +16,8 @@ public class Mute : MonoBehaviour
     void Update()
     {
         if(Input.GetKeyDown(KeyCode.M))
+            // muteImg.setActive(true);
             backgroundMusic.mute = !backgroundMusic.mute;
+            
     }
 }

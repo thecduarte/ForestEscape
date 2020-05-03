@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class TimeBar : MonoBehaviour
 {
-    float currentTime = 0f; float startingTime = 180f;
+    public float currentTime = 0f; public float startingTime = 180f;
     
     public GameObject player; 
     // public GameObject[] enemies;
@@ -15,6 +15,8 @@ public class TimeBar : MonoBehaviour
     Rigidbody2D rbPlayer;
    
     Animator animPlayer;
+    PlayerMovement movement;
+    GameObject health;
     public GameObject timeUpUI;
     public Slider slider;
     public Text displayText;
@@ -22,6 +24,9 @@ public class TimeBar : MonoBehaviour
     void Awake(){
         rbPlayer = player.GetComponent<Rigidbody2D>();
         animPlayer = player.GetComponent<Animator>();
+        movement = player.GetComponent<PlayerMovement>();
+        health = GameObject.Find("Health");
+
     }
     public float CurrentValue{
         get{
@@ -44,6 +49,8 @@ public class TimeBar : MonoBehaviour
         if(slider.value == 0){
             animPlayer.enabled = false;
             rbPlayer.constraints = RigidbodyConstraints2D.FreezePosition;
+            movement.enabled = false;
+            health.SetActive(false);
             timeUpUI.SetActive(true);
             StartCoroutine(TimeUp());
         }

@@ -5,9 +5,12 @@ using UnityEngine;
 public class EnemyHurtBox : MonoBehaviour
 {
     Collider2D currentCollider;
+    // float currentTime;
+
     private bool hasCollide = false;
     void Start(){
         currentCollider = GetComponent<Collider2D>();
+        // currentTime = GameObject.Find("Slider").GetComponent<TimeBar>().currentTime;
     }
     IEnumerator OnTriggerEnter2D(Collider2D collider){
         Debug.Log("Test:" + hasCollide);

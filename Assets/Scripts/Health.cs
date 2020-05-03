@@ -6,17 +6,23 @@ using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
-    Animator anim; Rigidbody2D rb; CharacterController2D controller; PlayerMovement movement; 
+    // float currentTime;
+    GameObject player;
+    public Animator anim; public Rigidbody2D rb; public CharacterController2D controller; public PlayerMovement movement; 
     public AudioSource hurtSound;
    public static int maxHealth = 6; public static int health =6; public int numHearts =3;
    public Image[] hearts;
    public Sprite fullHeart; public Sprite halfHeart; public Sprite emptyHeart;
    void Start(){
+       player = GameObject.Find("Player");
+    //    Debug.Log(player);
        health = maxHealth;
-       anim = GetComponent<Animator>();
-       rb = GetComponent<Rigidbody2D>();
-       controller = GetComponent<CharacterController2D>();
-       movement = GetComponent<PlayerMovement>();
+    //    anim = player.GetComponent<Animator>();
+    //    rb = player.GetComponent<Rigidbody2D>();
+    //    controller = player.GetComponent<CharacterController2D>();
+    //    movement = player.GetComponent<PlayerMovement>();
+        // currentTime = GameObject.Find("Slider").GetComponent<TimeBar>().currentTime;
+
    }
    void Update(){
        if(health < 0) health = 0;
@@ -62,8 +68,11 @@ public class Health : MonoBehaviour
     void OnTriggerEnter2D (Collider2D collider){
         // Debug.Log("Collision Detected:" + collider.gameObject.tag);
         if(collider.gameObject.tag == "Enemy"){
+            // Debug.Log("Current Time: " + currentTime);
+           
             anim.SetTrigger("Hurting");
             StartCoroutine("Hurt");
+            
         }
     }
     IEnumerator Hurt(){
