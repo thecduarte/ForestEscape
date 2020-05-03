@@ -12,6 +12,7 @@ public class TimeBar : MonoBehaviour
     // public GameObject[] enemies;
     // Rigidbody2D[] rbEnemies;
     // Animator[] animEnemies;
+    GameManager gameManager;
     Rigidbody2D rbPlayer;
    
     Animator animPlayer;
@@ -26,6 +27,7 @@ public class TimeBar : MonoBehaviour
         animPlayer = player.GetComponent<Animator>();
         movement = player.GetComponent<PlayerMovement>();
         health = GameObject.Find("Health");
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
 
     }
     public float CurrentValue{
@@ -57,6 +59,7 @@ public class TimeBar : MonoBehaviour
     }
     IEnumerator TimeUp(){
         yield return new WaitForSeconds(3);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        gameManager.Restart();
+        // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

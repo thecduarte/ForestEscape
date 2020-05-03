@@ -230,7 +230,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 21218409}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.444906, y: -1.3391998, z: -10}
+  m_LocalPosition: {x: -9.301542, y: -1.3391998, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 529442101}
@@ -2689,6 +2689,11 @@ PrefabInstance:
       propertyPath: coinCounter
       value: 
       objectReference: {fileID: 1147193947}
+    - target: {fileID: 7190555913897408083, guid: e66db7848b1570745b3014c6e9019e9a,
+        type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 1452091746}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e66db7848b1570745b3014c6e9019e9a, type: 3}
 --- !u!1001 &404860684
@@ -5561,6 +5566,7 @@ RectTransform:
   - {fileID: 2087129664}
   - {fileID: 1167669773}
   - {fileID: 1562687578}
+  - {fileID: 1022661745}
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -5839,7 +5845,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 934165831}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.444906, y: -1.3391998, z: -10}
+  m_LocalPosition: {x: -9.301542, y: -1.3391998, z: -10}
   m_LocalScale: {x: 1.0981, y: 1.0981, z: 1.0981}
   m_Children: []
   m_Father: {fileID: 0}
@@ -6149,7 +6155,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAACYn+vd1BDtcAIAABQFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVMuS2jAQ/BVK50DZ5p1bAiybwz5qSWovvghpjFXIkkuSF9gt/j0j2cYOOSG6Z0Y9PSN/EaFsCcxpszWCP2kO5PuA+DP5NujIRzjTg1Y78QltzLvgLvdBNMS8USc04rFPs7oAZwT7oQ7SB0cIVkpk2hQbfoCVts4inFFpASmjnc9WCH0NyBl/hkufcsFTMvenTzwto8EVjwyUA9MLjZPRMlmMJ8miSYlH02myjKbTWZOZjObz2SKeTzfDaB6KVIpJWpTAfUddrXgya2uMQ5zCZpsQ3xjTUgrbKCXuUgYndmUOBrwVXFBsPKiLRxMEchCH3HkJ/eyXLLPgGl8MvayFQQfrsuSnrm0tqD3Wyj6orIKCKJkGVXXVp/8ChnGgM6OLx/biOPKXuFyw4xu9MGpdz/g+vO5pDw6dqDzSvYT3HNSz3hpdKY6kM5VPrSwk6+7vrbdVDuzY4bXUO7AqO8vbObdT9j1cQ/vnlRTF3lPBSgR2UgfHw3KAwdn8QsFhdWxTAlGv4o+F3/TQ37GGeBDGOqSaLpWXt9eV8aFkEzzz3VRupY2CADeiS1BUussrlnH3M7zjetfeMQ/Uv6bm8oZrH8ldSoC7+Ci6o1716TYsm+vTE9j8pXJSKOhEe+IZfVpppeoV63vSpu0qk1HWSztUgv+7WmTBs8kkiqJ9xid0P54N4/lsvGfxjGXLKKGUkrB7QmGfVL7WQht7cGqqK65wz9qPzGBraBnWnRt62orPQvcsFyrTO2YA1Etd4SYcDF6C75JvuECDduCcUGHe5CslUrMj8PRWKA2dbs7O0LSrkpJSfGjnkZSswlclJVdy/QtQSwMEFAAACAgAAJif69MoTnRtAAAAeAAAAAkAJABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQGrVipLLSrOzM9TslIw0TPSMzTSUVBKL0osyCgGihiCOKWZKSB2tJJFSpqJiYGBQVJaiklikrGZrqG5mXFSsqFZcpqlgVFiYqJSLFB9SWVBql9ibipET0BiSUZaZl5KZl66nntRZoo7yGil2FoAUEsBAi0AFAAACAgAAJif693UEO1wAgAAFAUAAAsAJAAAAAAAAAAAAAAAAAAAAGdyYXBoMC5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0BUEsBAi0AFAAACAgAAJif69MoTnRtAAAAeAAAAAkAJAAAAAAAAAAAAAAAvQIAAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLBQYAAAAAAgACALgAAAB1AwAAAAA=
+    dataString: UEsDBBQAAAgIAACYn+sIIkhLcQIAABUFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMzoWxwUDorQVCeiDJhHZy8UVIa6xBljySHCAZ/ntXso1dekK8/dB7b1f+IkLZEpjTZmME32oO5PuA+DP5NuiCT3CmB6124hPanHfBXe6TaMh5o05oxGNfZnUBzgj2Qx2kT44QrJTItCnW/ABLbZ1FOKPSAoaMdr5aIfQ1IGf8GS58yQVP47k/feJpEQ2ueGSgHJheajweLcYPkySZNyWTUTQdL6LpdNZUTkfJdBGNp5P5ehjNQ5dKMUmLEriX1DWLk1nTJJ6FPIVqmxSvjGkphW2oEncpgxW7MgcD3gsuKCoP9OJRgkAO4pA7r6Nf/ZJlFlxjjKGXlTBoYd2W/NS1rwW1x5rZB5VVYIAaAqu66/a/hGEcwpnRxVN7cRz5S1wu2PGNXhi1rud8H171uAeHTlQe6V7Cew7qWW+MrhTHoDOVL60sjFfd35u2ZQ7s2OE11TuwKjvL20G3Y/YarkH+eSlFsfehYCUCO6mD42E7wOBsfiHhsDu2aYGoZ/HHwm966C9ZE3gUxjoMNSqVp7fXlfGpZB0882oqt9RGQYAb0iUoKt3lFdu4+xnexXrX3kUeqX9OzeVNrH0ldyUB7vKj6C70qk+3Ydlcn7Zg85fKSaGgI+0Dz+jTUitVr1jfk7ZsV5mMsl7ZoRL839UiDzxLkiiK9hlP6H4yG8bz2WTP4hnL8G1RSknYPaFQJ5WvNdHGHpya6por3LP2KzPYGFqGdeeGnjbis9A9y4XK9I4ZAPVSd7gRB4OX4Lvkay7QoB04J1SYN/lKidTsCDy9NUqD0vXZGZp2XVJSig/tPJKSZfispORKrn8BUEsDBBQAAAgIAACYn+vTKE50bQAAAHgAAAAJACQAbWV0YS5qc29uCgAgAAAAAAABABgAAIA+1d6xnQEAgD7V3rGdAQCAPtXesZ0Bq1YqSy0qzszPU7JSMNEz0jM00lFQSi9KLMgoBooYgjilmSkgdrSSRUqaiYmBgUFSWopJYpKxma6huZlxUrKhWXKapYFRYmKiUixQfUllQapfYm4qRE9AYklGWmZeSmZeup57UWaKO8hopdhaAFBLAQItABQAAAgIAACYn+sIIkhLcQIAABUFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAACYn+vTKE50bQAAAHgAAAAJACQAAAAAAAAAAAAAAL4CAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAdgMAAAAA
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -6467,6 +6473,83 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1012292661}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1022661744
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1022661745}
+  - component: {fileID: 1022661747}
+  - component: {fileID: 1022661746}
+  m_Layer: 5
+  m_Name: WinUI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1022661745
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022661744}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 902791516}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 1}
+  m_AnchorMax: {x: 0.5, y: 1}
+  m_AnchoredPosition: {x: -0.9, y: -157}
+  m_SizeDelta: {x: 751.4, y: 77.79999}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1022661746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022661744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 0.990566, b: 0.990566, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 12800000, guid: 652f7165b7c30ab46af6c4aad90a639b, type: 2}
+    m_FontSize: 60
+    m_FontStyle: 1
+    m_BestFit: 0
+    m_MinSize: 0
+    m_MaxSize: 120
+    m_Alignment: 1
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Congratulations! You Won!
+--- !u!222 &1022661747
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1022661744}
+  m_CullTransparentMesh: 0
 --- !u!1 &1023592697
 GameObject:
   m_ObjectHideFlags: 0
@@ -9696,6 +9779,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1452091745}
+  - component: {fileID: 1452091746}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -9717,6 +9801,21 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1452091746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1452091744}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 267e418d107e07d4498e614fa49cdf07, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  completeLevelUI: {fileID: 1022661744}
+  health: {fileID: 69622375}
+  waitingTime: 5
 --- !u!4 &1452952414 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2286719728139662978, guid: 1da44f149f7fa5c419e8adf9dedc9d4b,
@@ -10455,7 +10554,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1562687578
 RectTransform:
   m_ObjectHideFlags: 0
@@ -11137,7 +11236,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTime: 1
-  startingTime: 180
+  startingTime: 90
   player: {fileID: 2038173218}
   timeUpUI: {fileID: 1167669772}
   slider: {fileID: 1613837385}
@@ -14657,7 +14756,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 60d734c9d5370ca49af9cc8e0b3d2b08, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  muteImg: {fileID: 0}
+  muteImg: {fileID: 1562687577}
 --- !u!82 &2038173220
 AudioSource:
   m_ObjectHideFlags: 0

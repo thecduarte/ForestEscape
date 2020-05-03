@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Health : MonoBehaviour
 {
     // float currentTime;
-    GameObject player;
+    GameObject player; GameManager gameManager;
     public Animator anim; public Rigidbody2D rb; public CharacterController2D controller; public PlayerMovement movement; 
     public AudioSource hurtSound;
    public static int maxHealth = 6; public static int health =6; public int numHearts =3;
@@ -15,14 +15,8 @@ public class Health : MonoBehaviour
    public Sprite fullHeart; public Sprite halfHeart; public Sprite emptyHeart;
    void Start(){
        player = GameObject.Find("Player");
-    //    Debug.Log(player);
        health = maxHealth;
-    //    anim = player.GetComponent<Animator>();
-    //    rb = player.GetComponent<Rigidbody2D>();
-    //    controller = player.GetComponent<CharacterController2D>();
-    //    movement = player.GetComponent<PlayerMovement>();
-        // currentTime = GameObject.Find("Slider").GetComponent<TimeBar>().currentTime;
-
+       gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
    }
    void Update(){
        if(health < 0) health = 0;
@@ -31,7 +25,7 @@ public class Health : MonoBehaviour
             case 0:
                 for (int i =0; i<hearts.Length; i++)
                     hearts[i].sprite = emptyHeart;
-                health = 6; SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                health = 6; gameManager.Restart(); //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                 break;
             case 1:
                 hearts[0].sprite = halfHeart;

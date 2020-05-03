@@ -5,11 +5,8 @@ using UnityEngine.UI;
 
 public class Coin : MonoBehaviour
 {
-    public CoinCounter coinCounter;
-    Text label_score;
-
-    AudioSource coinCollect;
-    public GameManager gameManager;
+    CoinCounter coinCounter; Text label_score;
+    AudioSource coinCollect; GameManager gameManager;
     
     void Awake()
     {
@@ -17,6 +14,7 @@ public class Coin : MonoBehaviour
         label_score = GameObject.Find("coinText").GetComponent<Text>();
         label_score.text = " x " + coinCounter.coinCount;
         coinCollect = GameObject.Find("CoinSound").GetComponent<AudioSource>();
+        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -32,7 +30,7 @@ public class Coin : MonoBehaviour
 
             gameObject.SetActive(false);
             
-            if (coinCounter.coinCount == 7)
+            if (coinCounter.coinCount == 10)
             {
                 gameManager.CompleteLevel();
             }
