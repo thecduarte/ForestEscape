@@ -7,55 +7,71 @@ using UnityEngine.SceneManagement;
 public class Health : MonoBehaviour
 {
     // float currentTime;
-    GameObject player; GameManager gameManager;
+    GameManager gameManager; bool refresh = true;
     public Animator anim; public Rigidbody2D rb; public CharacterController2D controller; public PlayerMovement movement; 
     public AudioSource hurtSound;
    public static int maxHealth = 6; public static int health =6; public int numHearts =3;
    public Image[] hearts;
    public Sprite fullHeart; public Sprite halfHeart; public Sprite emptyHeart;
    void Start(){
-       player = GameObject.Find("Player");
        health = maxHealth;
        gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
    }
    void Update(){
-       if(health < 0) health = 0;
-       if(health > 6) health = 6;
+       Debug.Log("Health Value" + health);
+       if(health < 0) health = 0; 
+       if(health > 6) health = 6; 
         switch(health){
             case 0:
                 for (int i =0; i<hearts.Length; i++)
                     hearts[i].sprite = emptyHeart;
-                health = 6; gameManager.Restart(); //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+                health = 6; refresh = false; 
+                anim.SetBool("notHurting", false);
+                rb.constraints = RigidbodyConstraints2D.FreezePosition;
+                gameManager.GameOver(); //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                 break;
+
             case 1:
-                hearts[0].sprite = halfHeart;
-                hearts[1].sprite = emptyHeart;
-                hearts[2].sprite = emptyHeart;
+                if(refresh != false){
+                    hearts[0].sprite = halfHeart;
+                    hearts[1].sprite = emptyHeart;
+                    hearts[2].sprite = emptyHeart;
+                }
                 break;
             case 2:
-                hearts[0].sprite = fullHeart;
-                hearts[1].sprite = emptyHeart;
-                hearts[2].sprite = emptyHeart;
+                if(refresh != false){
+                    hearts[0].sprite = fullHeart;
+                    hearts[1].sprite = emptyHeart;
+                    hearts[2].sprite = emptyHeart;
+                }
                 break;
             case 3:
-                hearts[0].sprite = fullHeart;
-                hearts[1].sprite = halfHeart;
-                hearts[2].sprite = emptyHeart;
+                if(refresh != false){
+                    hearts[0].sprite = fullHeart;
+                    hearts[1].sprite = halfHeart;
+                    hearts[2].sprite = emptyHeart;
+                }
                 break;
             case 4:
-                hearts[0].sprite = fullHeart;
-                hearts[1].sprite = fullHeart;
-                hearts[2].sprite = emptyHeart;
+                if(refresh != false){
+                    hearts[0].sprite = fullHeart;
+                    hearts[1].sprite = fullHeart;
+                    hearts[2].sprite = emptyHeart;
+                }
                 break;
             case 5:
-                hearts[0].sprite = fullHeart;
-                hearts[1].sprite = fullHeart;
-                hearts[2].sprite = halfHeart;
+                if(refresh != false){
+                    hearts[0].sprite = fullHeart;
+                    hearts[1].sprite = fullHeart;
+                    hearts[2].sprite = halfHeart;
+                }
                 break;
             case 6:
-                hearts[0].sprite = fullHeart;
-                hearts[1].sprite = fullHeart;
-                hearts[2].sprite = fullHeart;
+                if(refresh != false){
+                    hearts[0].sprite = fullHeart;
+                    hearts[1].sprite = fullHeart;
+                    hearts[2].sprite = fullHeart;
+                }               
                 break;        
         }
     }
@@ -63,10 +79,8 @@ public class Health : MonoBehaviour
         // Debug.Log("Collision Detected:" + collider.gameObject.tag);
         if(collider.gameObject.tag == "Enemy"){
             // Debug.Log("Current Time: " + currentTime);
-           
             anim.SetTrigger("Hurting");
             StartCoroutine("Hurt");
-            
         }
     }
     IEnumerator Hurt(){

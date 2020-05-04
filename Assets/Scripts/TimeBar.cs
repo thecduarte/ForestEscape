@@ -57,12 +57,13 @@ public class TimeBar : MonoBehaviour
             health.SetActive(false);
             timeUpUI.SetActive(true);
             winUI.SetActive(false);
+            // gameManager.GameOver();
             StartCoroutine(TimeUp());
         }
     }
     IEnumerator TimeUp(){
-        yield return new WaitForSeconds(3);
-        gameManager.Restart();
-        // SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        yield return new WaitForSeconds(2f);
+        gameManager.GameOver();
+    
     }
 }

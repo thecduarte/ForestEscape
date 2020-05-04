@@ -230,7 +230,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 21218409}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.3018875, y: -1.3391998, z: -10}
+  m_LocalPosition: {x: -9.444906, y: -1.3391998, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 529442101}
@@ -5846,7 +5846,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 934165831}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -9.3018875, y: -1.3391998, z: -10}
+  m_LocalPosition: {x: -9.444906, y: -1.3391998, z: -10}
   m_LocalScale: {x: 1.0981, y: 1.0981, z: 1.0981}
   m_Children: []
   m_Father: {fileID: 0}
@@ -11331,7 +11331,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentTime: 1
-  startingTime: 90
+  startingTime: 5
   player: {fileID: 2038173218}
   winUI: {fileID: 1022661744}
   timeUpUI: {fileID: 1167669772}
