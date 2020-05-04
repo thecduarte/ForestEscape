@@ -7,7 +7,7 @@ public class GameManager : MonoBehaviour
     public GameObject completeLevelUI; public GameObject health;
     public GameObject timeUI;
     Animator menuAnim;
-    public float waitingTime = 5.0f;
+    public float waitingTime = 3.0f;
     bool winGame = false;
     bool gameOver = false;
     void Start(){
@@ -25,14 +25,22 @@ public class GameManager : MonoBehaviour
         
     }
     public void Restart(){
-        SceneManager.LoadScene(0);
+        StartCoroutine(WaitingWin());
+        // SceneManager.LoadScene(0);
     }
     public void GameOver()
     {
-        StartCoroutine(Waiting());
+        StartCoroutine(WaitingGameOver());
         // SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
     }
-    private IEnumerator Waiting(){
+    private IEnumerator WaitingWin(){
+        yield return new WaitForSeconds (1f);
+        menuAnim.SetBool("animateOut",true);
+        yield return new WaitForSeconds(1f);
+        SceneManager.LoadScene(0);
+
+    }
+    private IEnumerator WaitingGameOver(){
         yield return new WaitForSeconds (1f);
         menuAnim.SetBool("animateOut",true);
         yield return new WaitForSeconds(1f);
