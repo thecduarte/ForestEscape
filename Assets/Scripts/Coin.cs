@@ -30,9 +30,9 @@ public class Coin : MonoBehaviour
 
             gameObject.SetActive(false);
             
-            if (coinCounter.coinCount == 10)
+            if (coinCounter.coinCount == 1)
             {
-                gameManager.CompleteLevel();
+                gameManager.ForestEscape();
             }
         
         }
