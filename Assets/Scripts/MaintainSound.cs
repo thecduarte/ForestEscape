@@ -10,6 +10,7 @@ public class MaintainSound : MonoBehaviour
     GameObject muteImg;
     void Awake(){
         audio = GetComponent<AudioListener>();
+        AudioListener.volume = 1;
         muteImg = GameObject.Find("MuteImg");
         muteImg.SetActive(false);
         DontDestroyOnLoad(this.gameObject);
@@ -18,7 +19,8 @@ public class MaintainSound : MonoBehaviour
         
         if(Input.GetKeyDown(KeyCode.M)){
             if(SceneManager.GetActiveScene().buildIndex == 0)
-                muteImg.SetActive(!muteImg.activeInHierarchy); 
+                 if(muteImg.activeInHierarchy) muteImg.SetActive(false);
+                 else muteImg.SetActive(true); 
             if(AudioListener.volume == 0) AudioListener.volume = 1;
             else AudioListener.volume = 0;
         
