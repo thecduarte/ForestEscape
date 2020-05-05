@@ -7,7 +7,7 @@ using UnityEngine.SceneManagement;
 public class Health : MonoBehaviour
 {
     // float currentTime;
-    GameManager gameManager; bool refresh = true;
+    GameManager gameManager; bool refresh = true; bool once = false;
     public PlayerMovement playerMovement; public CharacterController2D controller2D;
     public Animator anim; public Rigidbody2D rb; public CharacterController2D controller; public PlayerMovement movement; 
     public AudioSource hurtSound;
@@ -28,6 +28,7 @@ public class Health : MonoBehaviour
                     hearts[i].sprite = emptyHeart;
                 health = 6; refresh = false; 
                 anim.SetTrigger("Hurting");
+                // if(once == false) hurtSound.Play(0); once = true;
                 anim.SetBool("notHurting", false);
                 controller2D.enabled = false;
                 playerMovement.enabled = false;

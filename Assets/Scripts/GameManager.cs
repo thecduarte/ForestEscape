@@ -40,11 +40,11 @@ public class GameManager : MonoBehaviour
         // yield return new WaitForSeconds (1f);
         menuAnim.SetBool("animateOut",true);
         yield return new WaitForSeconds(1f);
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(4);
 
     }
     private IEnumerator WaitingGameOver(){
-        yield return new WaitForSeconds (3f);
+        yield return new WaitForSeconds (2f);
         menuAnim.SetBool("animateOut",true);
         yield return new WaitForSeconds(1f);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex +1);
