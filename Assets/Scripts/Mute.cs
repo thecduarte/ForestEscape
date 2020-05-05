@@ -19,8 +19,9 @@ public class Mute : MonoBehaviour
     {
         if(Input.GetKeyDown(KeyCode.M)){
             muteImg.SetActive(!muteImg.activeInHierarchy);
-            audio.enabled = !audio.enabled;
-            // backgroundMusic.mute = !backgroundMusic.mute;
+            // audio.enabled = !audio.enabled;
+            if(AudioListener.volume == 0) AudioListener.volume = 1;
+            else AudioListener.volume = 0;
         }
             
     }

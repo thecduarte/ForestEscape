@@ -8,6 +8,7 @@ public class Health : MonoBehaviour
 {
     // float currentTime;
     GameManager gameManager; bool refresh = true;
+    public PlayerMovement playerMovement; public CharacterController2D controller2D;
     public Animator anim; public Rigidbody2D rb; public CharacterController2D controller; public PlayerMovement movement; 
     public AudioSource hurtSound;
    public static int maxHealth = 6; public static int health =6; public int numHearts =3;
@@ -26,8 +27,12 @@ public class Health : MonoBehaviour
                 for (int i =0; i<hearts.Length; i++)
                     hearts[i].sprite = emptyHeart;
                 health = 6; refresh = false; 
+                anim.SetTrigger("Hurting");
                 anim.SetBool("notHurting", false);
+                controller2D.enabled = false;
+                playerMovement.enabled = false;
                 rb.constraints = RigidbodyConstraints2D.FreezePosition;
+                Destroy(this.gameObject);
                 gameManager.GameOver(); //SceneManager.LoadScene(SceneManager.GetActiveScene().name);
                 break;
 

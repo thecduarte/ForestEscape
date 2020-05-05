@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4881923917045916658}
   - component: {fileID: 4881923917045916659}
+  - component: {fileID: 144315538913310323}
+  - component: {fileID: 1328191459}
   m_Layer: 0
   m_Name: Incline LR 1
   m_TagString: Untagged
@@ -54,6 +56,36 @@ EdgeCollider2D:
   m_Points:
   - {x: -3.6822066, y: -1.3922153}
   - {x: -0.75015354, y: 0.05682516}
+--- !u!68 &144315538913310323
+EdgeCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4881923917045916656}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 6200000, guid: 53b44ea480d571ea28566e1bf834ed55, type: 2}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_EdgeRadius: 0
+  m_Points:
+  - {x: -3.6822066, y: -1.3922153}
+  - {x: -0.75015354, y: 0.05682516}
+--- !u!114 &1328191459
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4881923917045916656}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 51e1bfadf579496489d597f1265f1ecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &982469913377956852
 PrefabInstance:
   m_ObjectHideFlags: 0
