@@ -12,9 +12,6 @@ public class FireballKill : MonoBehaviour
                     Destroy(this.gameObject);
                  }
                  if(collision.gameObject.tag == "Player")
-                  //   FindObjectOfType<GameManager>().GameOver();
-
                     Application.LoadLevel(Application.loadedLevel);
-       
             }
 }

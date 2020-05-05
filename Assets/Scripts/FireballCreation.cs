@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class FireballCreation : MonoBehaviour
 {
-    // Start is called before the first frame update
     public GameObject fireballPrefab;
     private GameObject fireTree;
     public float respawnTime = 1.0f;
@@ -15,11 +14,9 @@ public class FireballCreation : MonoBehaviour
     }
     private void spawnEnemy()
     {
-        
         GameObject a = Instantiate(fireballPrefab) as GameObject;
         a.transform.position = new Vector2(Random.Range(fireTree.transform.position.x-2, fireTree.transform.position.x+2),fireTree.transform.position.y);
         a.transform.localScale = new Vector2(1.6f,1.6f);
-        
     }
     IEnumerator fireWave()
     {
@@ -29,6 +26,4 @@ public class FireballCreation : MonoBehaviour
             spawnEnemy();
         }
     }
-
-    
 }

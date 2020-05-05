@@ -6,10 +6,7 @@ public class KillBox : MonoBehaviour
 {
    void OnTriggerEnter2D(Collider2D collision)
    {
-       if(collision.gameObject.tag == "Player")
-       {
-            // FindObjectOfType<GameManager>().GameOver();
-           Application.LoadLevel(Application.loadedLevel);
-       }
+       if(collision.gameObject.tag == "Player")      
+         Application.LoadLevel(Application.loadedLevel);
    }
 }

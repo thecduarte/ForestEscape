@@ -21,31 +21,15 @@ public class Coin : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
-            // StartCoroutine("PlayAudio");
-
             coinCounter.coinCount++;
             label_score.text = " x " + coinCounter.coinCount;
-
             coinCollect.Play();
-
             gameObject.SetActive(false);
-            
             if (coinCounter.coinCount == 10)
             {
                 gameManager.ForestEscape();
             }
-        
         }
-        
     }
-    /*
-    IEnumerator PlayAudio()
-    {
-        coinCollect.Play();
-        yield return new WaitForSeconds((float)0.48);
-        // gameObject.setActive(false);
-        Destroy(this.gameObject);   
-    }
-    */
 }
 

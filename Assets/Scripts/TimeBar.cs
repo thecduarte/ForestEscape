@@ -9,9 +9,6 @@ public class TimeBar : MonoBehaviour
     public float currentTime = 0f; public float startingTime = 180f;
     
     public GameObject player; 
-    // public GameObject[] enemies;
-    // Rigidbody2D[] rbEnemies;
-    // Animator[] animEnemies;
     GameManager gameManager;
     Rigidbody2D rbPlayer;
    
@@ -28,9 +25,7 @@ public class TimeBar : MonoBehaviour
         animPlayer = player.GetComponent<Animator>();
         movement = player.GetComponent<PlayerMovement>();
         health = GameObject.Find("Health");
-        // winUI = GameObject.Find("WinUI");
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
-
     }
     public float CurrentValue{
         get{
@@ -57,13 +52,11 @@ public class TimeBar : MonoBehaviour
             health.SetActive(false);
             timeUpUI.SetActive(true);
             winUI.SetActive(false);
-            // gameManager.GameOver();
             StartCoroutine(TimeUp());
         }
     }
     IEnumerator TimeUp(){
         yield return new WaitForSeconds(2f);
         gameManager.GameOver();
-    
     }
 }

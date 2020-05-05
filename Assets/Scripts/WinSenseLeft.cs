@@ -11,14 +11,12 @@ public class WinSenseLeft : MonoBehaviour
         coinCounter = GameObject.Find("CoinCounter").GetComponent<CoinCounter>();
         currentCollider = GetComponent<Collider2D>();
         if(leftArrow = GameObject.Find("leftarrow")) leftArrow.SetActive(false);
-        // if((rightArrow = GameObject.Find("rightarrow")) && rightCount == 0) rightArrow.SetActive(false); rightCount++;
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
     void Update(){
         if(coinCounter.coinCount == 10) {
             currentCollider.enabled = false; escape = true;
             leftArrow.SetActive(true); 
-            // if(rightCount > 0) rightArrow.SetActive(true);
         }
     }
     void OnTriggerEnter2D(Collider2D collider){

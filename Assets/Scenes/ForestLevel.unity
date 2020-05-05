@@ -376,14 +376,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fd0b21fa4178b2a4cbb8dd743a0b312d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMovement: {fileID: 2038173223}
-  controller2D: {fileID: 2038173227}
   anim: {fileID: 2038173222}
   rb: {fileID: 2038173226}
   controller: {fileID: 2038173227}
   movement: {fileID: 2038173223}
   hurtSound: {fileID: 69622378}
-  numHearts: 3
   hearts:
   - {fileID: 1695285261}
   - {fileID: 1237779039}
@@ -10537,7 +10534,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1390372358}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 44.13356, y: 2.258854, z: 263.74237}
+  m_LocalPosition: {x: 13.8, y: 2.258854, z: 263.74237}
   m_LocalScale: {x: 1.577265, y: 1.577265, z: 1.577265}
   m_Children: []
   m_Father: {fileID: 289113085}

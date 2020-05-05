@@ -16,18 +16,6 @@ public class PlayerMovement : MonoBehaviour
 
     bool crouch = false;
 
-    // // Start is called before the first frame update
-    // void Start()
-    // {
-        
-    // }
-    // AudioSource coinCollect;
-    // void Start()
-    // {
-    //     coinCollect = GetComponent<AudioSource>();
-    // }
-
-    // Update is called once per frame
     void Update()
     {
         horizontalMove = Input.GetAxisRaw("Horizontal") * runSpeed;
@@ -45,7 +33,6 @@ public class PlayerMovement : MonoBehaviour
         else if(Input.GetButtonUp("Crouch")){
             crouch = false; 
         }
-
     }
     
     public void OnLanding(){
@@ -58,18 +45,8 @@ public class PlayerMovement : MonoBehaviour
     
     //Physics Update
     void FixedUpdate(){
-
         //Character Movement Here
         controller.Move(horizontalMove * Time.fixedDeltaTime, crouch, jump);
         jump = false; 
-        
     }
-
-    // void OnCollisionEnter (Collision collision)
-    // {
-    //     if(collision.gameObject.tag == "Coin")
-    //     {
-    //         coinCollect.Play();
-    //     }
-    // }
 }

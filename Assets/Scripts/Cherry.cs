@@ -16,7 +16,6 @@ public class Cherry : MonoBehaviour
             if(Health.health < 6){
                 audio.Play();
                 Health.health++;
-                // yield return new WaitForSeconds()
                 gameObject.SetActive(false);
             }
         }

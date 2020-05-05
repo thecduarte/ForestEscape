@@ -10,14 +10,12 @@ public class WinSenseRight : MonoBehaviour
     void Start(){
         coinCounter = GameObject.Find("CoinCounter").GetComponent<CoinCounter>();
         currentCollider = GetComponent<Collider2D>();
-        // if(leftArrow = GameObject.Find("leftarrow")) leftArrow.SetActive(false);
         if(rightArrow = GameObject.Find("rightarrow")) rightArrow.SetActive(false);
         gameManager = GameObject.Find("GameManager").GetComponent<GameManager>();
     }
     void Update(){
         if(coinCounter.coinCount == 10) {
             currentCollider.enabled = false; escape = true;
-            // leftArrow.SetActive(true); 
             rightArrow.SetActive(true);
         }
     }
